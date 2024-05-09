@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Sección Nosotros -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>NUESTRA EMPRESA</h2>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">MISIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li class="list-group-item">VISIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li class="list-group-item">DIRECCIÓN: Av. Ejemplo 123, Ciudad, País.</li>
+        <li class="list-group-item">TELÉFONO: +123 456 789</li>
+        <li class="list-group-item">EMAIL: info@example.com</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <img src="{{ url_for('static', filename='img/empresa.jpg')}}" class="img-fluid" alt="Imagen de la empresa">
+    </div>
+  </div>
+</div>
+{% endblock %}
