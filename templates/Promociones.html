@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- Sección Promociones -->
-<div class="container">
+<div class="container container-separar">
   <div class="row">
     <div class="col-md-12 text-center">
       <h2>PROMOCIONES</h2>
@@ -11,7 +11,7 @@
   <div class="row mt-4">
     {% for promocion in promociones %}
     <div class="col-md-3 mb-4">
-      <div class="card">
+      <div class="card zoom-effect">
         <img src="{{ url_for('static', filename='img/' + promocion.imagen)}}" class="card-img-top" alt="{{ promocion.nombre }}">
         <div class="card-body">
           <h5 class="card-title">{{ promocion.nombre }}</h5>

@@ -2,24 +2,26 @@
 
 {% block content %}
 <!-- Sección Nosotros -->
-<div class="container">
+<div class="container container-separar">
   <div class="row">
     <div class="col-md-12 text-center">
-      <h2>NUESTRA EMPRESA</h2>
+      <h2>SOBRE NOSOTROS</h2>
     </div>
   </div>
   <div class="row mt-4">
-    <div class="col-md-6">
-      <ul class="list-group">
-        <li class="list-group-item">MISIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li class="list-group-item">VISIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li class="list-group-item">DIRECCIÓN: Av. Ejemplo 123, Ciudad, País.</li>
-        <li class="list-group-item">TELÉFONO: +123 456 789</li>
-        <li class="list-group-item">EMAIL: info@example.com</li>
-      </ul>
+    <div class="info-restaurante col-md-6">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>MISIÓN:</strong> Brindar una experiencia gastronómica auténtica con platillos italianos tradicionales.</li>
+          <li class="list-group-item"><strong>VISIÓN:</strong> Ser reconocidos como el mejor restaurante italiano en Ecuador, manteniendo la calidad y autenticidad de nuestros platillos.</li>
+          <li class="list-group-item"><strong>DIRECCIÓN:</strong> Av. Italia 123, Quito, Ecuador.</li>
+          <li class="list-group-item"><strong>TELÉFONO:</strong> +593 2 123 4567</li>
+          <li class="list-group-item"><strong>EMAIL:</strong> info@latavola.com</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <img src="{{ url_for('static', filename='img/empresa.jpg')}}" class="img-fluid" alt="Imagen de la empresa">
+    <div class="imagen-restaurante col-md-6">
+      <img src="{{ url_for('static', filename='img/empresa.jpg')}}" alt="Imagen de la empresa">
     </div>
   </div>
 </div>

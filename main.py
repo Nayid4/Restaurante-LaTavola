@@ -52,17 +52,22 @@ def agregar_producto():
         precio = request.form['precio']
         iva = request.form['iva']
         
+        # Validar si el producto ya existe
+        for producto in listProductos:
+            if producto['codigo'] == codigo:
+                return render_template('AgregarProductos.html', error="El código de producto ya existe.")
+        
         # Validar el campo de código (debe ser numérico)
         if not codigo.isdigit():
-            return "El código debe ser un valor numérico.", 400
+            return render_template('AgregarProductos.html', error="El código debe ser un valor numérico.")
         
         # Validar el campo de precio (debe ser un número positivo)
         try:
             precio = float(precio)
             if precio <= 0:
                 raise ValueError("El precio debe ser un número positivo.")
-        except ValueError as e:
-            return str(e), 400
+        except ValueError:
+            return render_template('AgregarProductos.html', error="El precio debe ser un número válido y positivo.")
 
         # Crear un nuevo producto
         nuevo_producto = {
@@ -91,14 +96,14 @@ def productos():
 @app.route('/promociones')
 def promociones():
     promociones = [
-        {"nombre": "Promoción 1", "imagen": "promo1.jpg"},
-        {"nombre": "Promoción 2", "imagen": "promo2.jpg"},
-        {"nombre": "Promoción 3", "imagen": "promo3.jpg"},
-        {"nombre": "Promoción 4", "imagen": "promo4.jpg"},
-        {"nombre": "Promoción 5", "imagen": "promo5.jpg"},
-        {"nombre": "Promoción 6", "imagen": "promo6.jpg"},
-        {"nombre": "Promoción 7", "imagen": "promo7.jpg"},
-        {"nombre": "Promoción 8", "imagen": "promo8.jpg"},
+        {"nombre": "Promoción 1", "imagen": "promocion-1.jpg"},
+        {"nombre": "Promoción 2", "imagen": "promocion-2.jpg"},
+        {"nombre": "Promoción 3", "imagen": "promocion-3.jpg"},
+        {"nombre": "Promoción 4", "imagen": "promocion-1.jpg"},
+        {"nombre": "Promoción 5", "imagen": "promocion-2.jpg"},
+        {"nombre": "Promoción 6", "imagen": "promocion-3.jpg"},
+        {"nombre": "Promoción 7", "imagen": "promocion-1.jpg"},
+        {"nombre": "Promoción 8", "imagen": "promocion-2.jpg"},
         # Agrega más promociones según sea necesario
     ]
 

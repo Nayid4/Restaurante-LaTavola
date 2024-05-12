@@ -2,52 +2,67 @@
 
 {% block content %}
 <!-- Carrusel de imágenes -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{{ url_for('static', filename='img/producto1.jpg')}}" class="d-block w-100" alt="Producto 1">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ url_for('static', filename='img/producto2.jpg')}}" class="d-block w-100" alt="Producto 2">
-    </div>
-    <!-- Agrega más elementos de carrusel según sea necesario -->
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
-  </button>
-</div>
-
-<!-- Sección de sucursales -->
-<div class="row mt-5">
-  <div class="col-md-6">
-    <h2>Sucursales</h2>
-    <!-- Agrega aquí la información sobre las sucursales si lo deseas -->
-  </div>
-  <div class="col-md-6">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/sucursal1.jpg')}}" class="img-fluid" alt="Sucursal 1">
+  <div >
+    <section class="container-carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active d-item">
+            <img src="{{ url_for('static', filename='img/promocion-1.jpg')}}" class="d-block w-100" alt="Producto 1">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/promocion-2.jpg')}}" class="d-block w-100" alt="Producto 2">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/promocion-3.jpg')}}" class="d-block w-100" alt="Producto 2">
+          </div>
+          <!-- Agrega más elementos de carrusel según sea necesario -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
       </div>
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/sucursal2.jpg')}}" class="img-fluid" alt="Sucursal 2">
+    </section>
+    
+    
+    <section class="container container-collage mb-4">
+      <!-- Sección de sucursales -->
+      <div class="row align-items-center">
+        <div class="col-lg-6 collage-contenido">
+          <h2 class="collage-titulo">Sucursales</h2>
+          <!-- Agrega aquí la información sobre las sucursales si lo deseas -->
+        </div>
+        <div class="col-lg-6 collage-imagenes">
+          <div class="row gx-3 gy-3">
+            <div class="col-md-4 mb-3">
+              <div class="collage-imagen">
+                <img src="{{ url_for('static', filename='img/sucursal1.jpg')}}" class="img-fluid rounded" alt="Sucursal 1">
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="collage-imagen">
+                <img src="{{ url_for('static', filename='img/sucursal2.jpg')}}" class="img-fluid rounded" alt="Sucursal 2">
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="collage-imagen">
+                <img src="{{ url_for('static', filename='img/sucursal3.jpg')}}" class="img-fluid rounded" alt="Sucursal 3">
+              </div>
+            </div>
+            <!-- Agrega más imágenes de sucursales según sea necesario -->
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <img src="{{ url_for('static', filename='img/sucursal3.jpg')}}" class="img-fluid" alt="Sucursal 3">
-      </div>
-      <!-- Agrega más imágenes de sucursales según sea necesario -->
-    </div>
+    </section>
+    
   </div>
-</div>
 {% endblock %}

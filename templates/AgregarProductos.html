@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- Sección Nuevo Producto -->
-<div class="container">
+<div class="container container-separar">
   <div class="row">
     <div class="col-md-12 text-center">
       <h2>NUEVO PRODUCTO</h2>
@@ -10,6 +10,11 @@
   </div>
   <div class="row mt-4">
     <div class="col-md-6 offset-md-3">
+      {% if error %}
+      <div class="alert alert-danger" role="alert">
+        {{ error }}
+      </div>
+      {% endif %}
       <form method="POST">
         <div class="mb-3">
           <label for="codigo" class="form-label">Código</label>

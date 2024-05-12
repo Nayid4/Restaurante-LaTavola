@@ -1,8 +1,184 @@
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+:root {
+    --primary: #272D4D;
+    --secondary: #B83564;
+    --third: #FF6A5A;
+    --fourth: #FFB350;
+    --fifth: #83BBAA;
 }
 
-h1 {
-    color: red;
-    font-size: 20px;
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
+
+.navbar {
+    background-color: var(--fifth);
+    position: fixed;
+    top: 0; /* Fijar el header en la parte superior */
+    left: 0;
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+}
+
+
+.navbar-toggler {
+    background-color: var(--third);
+}
+.offcanvas-header {
+    background-color: var(--fifth);
+    color: white;
+}
+.offcanvas-body a {
+    color: black;
+}
+
+.navbar-header {
+    background-color: var(--fifth);
+    padding: 10px 0; /* Añadí un poco de relleno vertical */
+    position: fixed;
+    top: 0; /* Fijar el header en la parte superior */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurar que esté por encima del contenido */
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    width: 1000px;
+}
+
+.navbar-logo {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.5rem; /* Tamaño de fuente aumentado para mayor visibilidad */
+}
+
+.navbar-opciones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-opciones li {
+    margin-right: 20px; /* Espacio entre elementos */
+}
+
+.navbar-opcion {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-opciones li:hover a {
+    border-bottom: 2px solid var(--fourth); /* Cambiar el color del borde al hacer hover */
+    padding-bottom: 5px; /* Añadir espacio debajo del texto al hacer hover */
+
+}
+
+.container-separar {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.info-restaurante {
+    margin-bottom: 20px;
+}
+
+.imagen-restaurante {
+    width: 100%; /* Asegura que el contenedor abarque todo el ancho disponible */
+    height: 300px; /* Establece una altura fija para el contenedor */
+    display: flex; /* Usa flexbox para centrar la imagen verticalmente */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
+}
+
+.imagen-restaurante img {
+    position: relative;
+    height: 500px;
+    top: 50px;
+}
+
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-collage {
+    margin-top: 40px;
+}
+
+.collage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.collage-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage-titulo {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+}
+
+.collage-imagenes {
+    display: flex;
+    justify-content: center;
+}
+
+.collage-imagen img {
+    width: 100%;
+    height: 200px; /* Ajusta el valor según sea necesario */
+    object-fit: cover;
+    display: block;
+    margin: auto; /* Centrar horizontalmente */
+  }
+
+  /* Centrar verticalmente */
+  .collage-imagen {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767.98px) {
+    .collage-imagen,
+    .collage-contenido {
+      text-align: center; /* Centrar el texto e imágenes */
+    }
+  }
+.zoom-effect {
+    transition: transform 0.3s ease; /* Agrega una transición suave al efecto */
+    cursor: pointer;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% cuando el mouse está sobre el elemento */
+}
+
+/* Reglas CSS personalizadas para hacer la tabla responsive */
+@media only screen and (max-width: 768px) {
+    .custom-table {
+      overflow-x: auto;
+    }
+  }
