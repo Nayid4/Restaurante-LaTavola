@@ -182,3 +182,8 @@ body {
       overflow-x: auto;
     }
   }
+
+  .titulo{
+    font-weight: 700;
+    font-size: 70px;
+  }
